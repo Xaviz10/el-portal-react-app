@@ -1,0 +1,29 @@
+/* main section */
+
+
+.property-list-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 320px;
+    padding: 80px 20px;
+    padding-top: 120px;
+}
+
+.property-list__comment {
+    width: 90%;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    font-weight: 400;
+    margin: 20px;
+}
+
+.property-list__results {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin: 10px;
+}

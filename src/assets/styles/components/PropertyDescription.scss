@@ -1,0 +1,587 @@
+/*
+	1. Position
+	2. Box Model (margin, pading, border ...)
+	3. typography
+	4. Visual efects (shadowbox, borde)
+	5. Others
+*/
+/*Variables*/
+
+@import "../Vars.scss";
+
+
+/* main section */
+
+.main-property-description-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-width: 320px;
+    padding: 50px 0;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+
+.property-description-admin {
+    position: relative;
+    padding: 10px 0;
+
+    background: rgba(245, 245, 245, 0.192);
+    backdrop-filter: blur(4px);
+
+    text-align: left;
+}
+
+.property-description-admin__button-edit {
+    position: relative;
+    width: 95px;
+    height: 35px;
+    padding-left: 25px;
+    margin-left: 20px;
+
+    text-align: center;
+    vertical-align: text-bottom;
+
+    font-size: 1.6rem;
+    line-height: 3.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: $portal-blue;
+
+    background-color: $just-white;
+    border: 2px solid $portal-blue;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.property-description-admin__button-edit span{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 20px;
+    height: 20px;
+
+    // background-image: url('../static/icons/sort-icon.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.property-description-admin__button-delete {
+    position: relative;
+    width: 95px;
+    height: 35px;
+    padding-left: 25px;
+    margin-left: 20px;
+
+
+    text-align: center;
+    vertical-align: text-bottom;
+
+    font-size: 1.6rem;
+    line-height: 3.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: $portal-blue;
+
+    background-color: $just-white;
+    border: 2px solid $portal-blue;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.property-description-admin__button-delete span{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 20px;
+    height: 20px;
+
+    // background-image: url('../static/icons/sort-icon.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.property-description-footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    padding: 20px;
+}
+
+.property-description-footer__title {
+    width: 100%;
+    display: block;
+    text-align: left;
+    margin: 10px 0;
+    margin-top: 0;
+
+    font-size: 2.1rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+    color: $soft-black;
+
+
+}
+
+.property-description-footer__details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+}
+
+.property-description-footer__details .details__price {
+    position: relative;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+
+    display: grid;
+    padding: 20px 0;
+    justify-items: start;
+
+}
+
+.details__price h4 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    font-weight: 700;
+    color: $portal-purple;
+}
+
+.details__price span {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;  
+    
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: 700;
+    color: $soft-gray;
+}
+
+.property-description-footer__details .details__code {
+    position: relative;
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+
+    display: grid;
+    padding: 20px 0;
+    justify-items: end;
+
+}
+
+.details__code h4 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    font-weight: 700;
+}
+
+.details__code span {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;  
+    
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: 700;
+    color: $soft-gray;
+}
+
+.property-description-footer__details .details__area {
+    position: relative;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    display: grid;
+    grid-template-rows: 30px 20px;
+    gap: 2px;
+    justify-items: center;
+    align-items: center;
+}
+
+.details__area p {
+    padding-bottom: 2px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    align-self: end;
+
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+    color: $soft-black;
+}
+.details__area span {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;    
+    width: 30px;
+    height: 30px;
+
+    // background-image: url('../static/icons/area-icon.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.property-description-footer__details .details__rooms {
+    position: relative;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    display: grid;
+    grid-template-rows: 30px 20px;
+    gap: 2px;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.details__rooms p {
+    padding-bottom: 2px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    align-self: end;
+
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+    color: $soft-black;
+}
+
+.details__rooms span {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;  
+    width: 30px;
+    height: 30px;
+
+    // background-image: url('../static/icons/habs-icon.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.property-description-footer__details .details__baths {
+    position: relative;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+
+    display: grid;
+    grid-template-rows: 30px 20px;
+    gap: 2px;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.details__baths p {
+    padding-bottom: 2px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    align-self: end;
+
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+    color: $soft-black;
+}
+
+.details__baths span {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;  
+    width: 30px;
+    height: 30px;
+
+    // background-image: url('../static/icons/bath-icon.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.property-description-footer__details .details__parking {
+    position: relative;
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+
+    display: grid;
+    grid-template-rows: 30px 20px;
+    gap: 2px;
+    justify-items: center;
+    align-items: center;
+}
+
+.details__parking p {
+    padding-bottom: 2px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    align-self: end;
+
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+    color: $soft-black;
+}
+
+.details__parking span {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 30px;
+    height: 30px;
+
+    // background-image: url('../static/icons/bath-icon.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.property-description-footer__complement {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.property-description-footer__complement > * {
+    flex: 0 1 20em;
+}
+
+.property-description-footer__complement .property-description-complement {
+    display: grid;
+    grid-template-columns: 40px auto;
+    grid-template-rows: 20px 20px;
+
+    margin-top: 20px;
+}
+
+.property-description-complement span{
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.property-description-complement h4 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    font-weight: 700;
+}
+
+.property-description-complement p {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: $soft-black;
+}
+
+.complement__area-price span{
+    // background-image: url('../static/icons/bath-icon.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+} 
+
+.complement__administration span{
+    // background-image: url('../static/icons/bath-icon.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+} 
+
+.complement__year span{
+    // background-image: url('../static/icons/bath-icon.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+} 
+
+.complement__status-level span{
+
+    // background-image: url('../static/icons/bath-icon.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+} 
+
+.complement__flat span{
+    // background-image: url('../static/icons/bath-icon.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.complement__subsidy span{
+    // background-image: url('../static/icons/bath-icon.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+} 
+
+.property-description-characteristics  {
+    position: relative;
+    width: calc(100% - 40px);
+    max-width: 1100px;
+    margin: 0 20px;
+    text-align: left;
+
+    border-top: 2px solid rgba(207, 207, 207, 0.5);
+}
+
+.property-description-characteristics__title {
+    width: 100%;
+    margin: 20px 0;
+
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    font-weight: 400;
+    color: $soft-gray;
+
+    text-align: left;
+}
+
+.property-description-characteristics__list {
+    display: flex;
+    flex-wrap: wrap;
+    
+    width: 100%;
+    padding: 0 10px; 
+    max-width: 920px;
+}
+
+.property-description-characteristics__list > * {
+    flex: 0 1 9em;
+}
+
+.property-description-characteristics__list li{
+    width: 120px;
+    margin: 10px;
+
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+    color: $soft-black;
+}
+
+.property-description-characteristics__description {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 10px; 
+    max-width: 920px;
+
+}
+
+.description__title {
+    width: 100%;
+    margin: 10px 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000;
+
+    text-align: left;
+}
+
+.description__detailed {
+    width: 100%;
+    margin: 10px 0;
+
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: $soft-black;
+
+    text-align: left;
+}
+
+.property-description-map-contact-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 720px;
+    margin: 20px;
+    padding: 10px;
+
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.property-description-map-contact-container .property__map{
+    min-width: 320px;
+    max-width: 720px;
+    height: 420px;
+    /* border: 1px solid $soft-black); */
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.property-description-map-contact-container .property-description-map-contact__title{
+    margin: 10px 0;
+    padding-top: 15px;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    color: $soft-black;
+    text-align: center;
+}
+
+.property-description-map-contact-container .property__form-contact{
+    position: relative;
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.property__form-contact label{
+    /* margin: 5px 0; */
+    width: 100%;
+    margin-top: 10px;
+}
+
+.property__form-contact input{
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 5px;
+}
+
+.property__form-contact .form-contact__button {
+    align-self: center;
+    width: 120px;
+    height: 40px;
+    margin: 10px 0;
+    padding-left: 0;
+
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    color: $just-white;
+
+    background-color: $portal-purple;
+    box-shadow: 0px 10px 41px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: none;
+}

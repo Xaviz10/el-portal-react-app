@@ -1,0 +1,31 @@
+@import "../Vars.scss";
+
+/*Find Out section*/
+.main-find-out-container{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 50px 0;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.find-out-cards-container {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    min-width: 320px;
+    height: 480px;
+    margin: 20px auto;
+
+    overflow-y: visible;
+    overflow-x: auto;
+    /*add to x a scroll when overflow*/
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.find-out-cards-container .fake-card{
+    padding: 20px;
+}

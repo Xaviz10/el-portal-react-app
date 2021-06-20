@@ -1,0 +1,421 @@
+@import "../Vars.scss";
+
+
+.form__new-property {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin: 10px 0;
+}
+
+.form__photos-slider-container {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0 10px;
+
+    background-color: $just-white;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.form__photos-slider {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 25vh;
+    padding: 10px 0;
+
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.form__photos-slider div{
+    padding: 1px;
+}
+
+.form__photos-slider img {
+    width: 20vh;
+    margin-right: 8px;
+
+    background: rgba(196, 196, 196, 0.3);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+
+    object-fit: contain;
+}
+
+.photos-slider__button-add-photos {
+    position: relative;
+    padding: 0 10vh;
+
+    background-color: $soft-white;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    border: 0;
+    border-radius: 5px;
+
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: $soft-gray;
+}
+
+.photos-slider__button-add-photos span {
+    position: absolute;
+    top: calc(50% - 4vh);
+    left: calc(50% - 4vh);
+    width: 8vh;
+    height: 8vh;
+
+    // background-image: url('../static/icons/add-photo-icon.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form__new-property label{
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    height: 45px;
+    margin: 5px 10px;
+    padding: 0 5px 0 40px;
+
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+
+    background: #FFFFFF;
+    /* soft-gray */
+
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+}
+
+.form__new-property input,
+.form__new-property select{
+    
+    width: 100%;
+    height: 45px;
+
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: $soft-gray;
+
+    background: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+}
+
+.form__new-property p {
+    width: calc(100% - 20px);
+    height: 50px;
+    margin: 0 10px;
+    margin-top: 10px;
+    padding: 5px 0;
+
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: $hard-gray;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+
+    border-top: 2px solid #777777;
+}
+
+/*--New property Details--*/
+
+.form__property-details {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.form__property-details .new-property__title, 
+.form__property-details .new-property__price, 
+.form__property-details .new-property__code, 
+.form__property-details .new-property__type {
+    padding-left: 10px;
+}
+
+.new-property__rooms input,
+.new-property__bathrooms input,
+.new-property__parking input,
+.new-property__status-level input,
+.new-property__flat input {
+    width: calc(100% - 90px);
+}
+
+.new-property__detail-item {
+    width: 100%;
+    padding-left: 40px;
+}
+
+.form__property-details .new-property__code, 
+.form__property-details .new-property__type {
+
+    width: calc(50% - 20px);
+}
+
+.form__property-details span {
+    position: absolute;
+    left: 10px;
+    top: 13px;
+    width: 20px;
+    height: 20px;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.form__property-details button {
+    position: absolute;
+    top: calc(50% - 15px);
+    width: 34.5px;
+    height: 30px;
+
+    
+    font-size: 3.0rem;
+    line-height: 3.0rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: $hard-gray;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 5px;
+}
+
+.form__property-details button:active {
+
+    color: $just-white;
+    text-shadow: 0px 0px 4px #C4C4C4;
+
+    background: #3E4095;
+    box-shadow: 0px 0px 4px #3E4095;
+}
+
+.form__property-details .btn__up {
+    left: calc(100% - 85px);
+}
+
+.form__property-details .btn__down {
+    left: calc(100% - 40px);
+}
+
+// .new-property__area span{
+//     background-image: url('../static/icons/area-icon.svg');
+// }
+
+// .new-property__rooms span{
+//     background-image: url('../static/icons/rooms-icon.svg');
+// }
+
+// .new-property__bathrooms span{
+//     background-image: url('../static/icons/bath-icon.svg');
+// }
+
+// .new-property__parking span{
+//     background-image: url('../static/icons/parking-icon.svg');
+// }
+
+// .new-property__admin-value span{
+//     background-image: url('../static/icons/admin-icon.svg');
+// }
+
+// .new-property__year span{
+//     background-image: url('../static/icons/property-year-icon.svg');
+// }
+
+// .new-property__status-level span{
+//     background-image: url('../static/icons/status-icon.svg');
+// }
+
+// .new-property__flat span{
+//     background-image: url('../static/icons/flat-icon.svg');
+// }
+
+.form__property-aditional-characteristics {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.new-property__subsidy, 
+.new-property__aditional-characteristics {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    height: 45px;
+    margin: 5px 10px;
+    padding: 0 5px 0 40px;
+
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+
+    background: $just-white;
+}
+
+.new-property__aditional-characteristics {
+    width: calc(50% - 20px);
+}
+
+.new-property__subsidy input, 
+.new-property__aditional-characteristics input{
+    position: absolute;
+    left: 0px;
+    top: calc(50% - 15px);
+
+    width: 30px;
+    height: 30px;
+}
+
+.new-property__subsidy label, 
+.new-property__aditional-characteristics label{
+    width: 100%;
+    height: 45px;
+    margin: 0;
+    padding: 0;
+    
+    font-size: 1.4rem;
+    line-height: 4.5rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: $hard-gray;
+
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+.form__property-description {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.form__new-property .form__property-description label{
+    max-width: 760px;
+}
+
+.form__property-description .new-property__title-description,
+.form__property-description .new-property__detailed-description {
+    padding-left: 10px;
+    height: auto;
+}
+
+
+.form__property-description textarea{
+    width: 100%;
+    max-width: 100%;
+    padding: 5px 0;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: $soft-gray;
+
+    background: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+}
+
+.new-property__location span {
+    position: absolute;
+    left: 10px;
+    top: 13px;
+    width: 20px;
+    height: 20px;
+
+    // background-image: url('../static/icons/location-icon.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.new-property__map {
+    
+    position: relative;
+    width: 100%;
+    max-width: 760px;
+    height: 420px;
+    margin: 5px 10px;
+    padding: 2px;
+
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+}
+
+.new-property__map span{
+
+    position: absolute;
+    top: calc(50% - 4vh);
+    left: calc(50% - 4vh);
+    width: 8vh;
+    height: 8vh;
+
+    // background-image: url('../static/icons/location-icon.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form__buttons-confirmation {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.form__new-property > button,
+.form__buttons-confirmation > button {
+    width: calc(50% - 20px);
+    max-width: 180px;
+    height: 45px;
+    margin: 5px 10px;
+    padding: 5px;
+
+    font-size: 2.1rem;
+    line-height: 2.4rem;
+    color: $just-white;
+
+    background: $just-white;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 5px;
+}
+
+.form__buttons-confirmation .form-button__save-property {
+    background: $portal-purple;
+}
+
+.form__buttons-confirmation .form-button__cancel-property {
+    color: $portal-purple;
+    border: 2px solid $portal-purple;
+    box-sizing: border-box;
+}
+

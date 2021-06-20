@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HolaMundo from './components/HolaMundo';
+import App from './container/App';
 
-ReactDOM.render(<HolaMundo />, document.getElementById('root'))
+
+
+ReactDOM.render(<App />, document.getElementById('root'))

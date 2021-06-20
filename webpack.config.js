@@ -37,6 +37,11 @@ module.exports={
                     }
                 ]
             },
+
+            // {
+            //     test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            //     type: 'asset/resource',
+            // },
             {
                 test: /\.(s*)css$/,
                 use: [ 
@@ -44,9 +49,24 @@ module.exports={
                         loader: MiniCssExtractPlugin.loader
                     },
                     'css-loader',
-                    'sass-loader'
+                    // 'resolve-url-loader',
+                    'sass-loader',
                 ]
-            }
+            },
+
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: 'assets/[hash].[ext]'
+                        }
+                    },
+                ]
+            },
+
+
         ]
     },
 
