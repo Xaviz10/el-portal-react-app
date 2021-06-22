@@ -2,7 +2,8 @@
 
 /* search container */
 .main-search-container{
-
+    position: relative;
+    justify-items: center;
     width: 100%;
     min-width: 320px;
     height: 520px;
@@ -29,8 +30,9 @@
     position: relative;
     top: 180px;
 
-    min-width: 288px;
-    margin: 20px;
+    min-width: 280px;
+    max-width: 720px;
+    margin: 20px auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;

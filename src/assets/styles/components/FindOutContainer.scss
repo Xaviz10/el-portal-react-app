@@ -9,23 +9,85 @@
     padding-bottom: 20px;
 }
 
-.find-out-cards-container {
+.find-out-cards-container { 
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+.find-out-cards-container .find-out-cards-inner-container{
 
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100%;
+    width: 90%;
     min-width: 320px;
     height: 480px;
     margin: 20px auto;
 
-    overflow-y: visible;
-    overflow-x: auto;
-    /*add to x a scroll when overflow*/
-    overscroll-behavior-x: contain;
+    overflow: hidden;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain; /*add to x a scroll when overflow*/
     scroll-snap-type: x proximity;
+    scroll-behavior: smooth;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
-.find-out-cards-container .fake-card{
+.find-out-cards-inner-container::-webkit-scrollbar {
+    display: none;
+}
+
+.find-out-cards-inner-container .fake-card{
     padding: 20px;
+}
+
+
+.find-out-cards-inner-container .left-scroll {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 520px;
+    background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.find-out-cards-inner-container .left-scroll span{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.9));
+}
+
+.find-out-cards-inner-container .right-scroll {
+    position: absolute;
+    top: 0;
+    left: calc(95% - 40px);
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 520px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.find-out-cards-inner-container .right-scroll span{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.9));
 }

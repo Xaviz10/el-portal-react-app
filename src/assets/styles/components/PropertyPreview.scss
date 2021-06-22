@@ -4,10 +4,10 @@
 
 .featured-cards__property {
     position: relative;
+    scroll-snap-align: center; /*center the element automatically*/
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    scroll-snap-align: center; /*center the element automatically*/
     min-width: 280px;
     height: 420px;
     margin: 20px;

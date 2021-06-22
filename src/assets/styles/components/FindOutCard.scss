@@ -4,9 +4,12 @@
 .find-out-cards__recommendation {
     position: relative;
     scroll-snap-align: center; /*center the element automatically*/
-    min-width: 300px;
-    height: 360px;
-    margin: 0 20px;
+    width: 420px;
+    min-width: 280px;
+    max-width: 280px;
+    height: 420px;
+    margin: 20px;
+    padding: 10px 20px;
 
     // background-image: url('../static/img/recommendation-houses-img.jpg');
     background-position: center;

@@ -20,9 +20,9 @@ import PropertyDescriptionContainer from '../components/PropertyDescriptionConta
 
 
 
-const App = () => {
+const Home = () => {
 
-    const initialState = useInitialState('http://localhost:3000/initialState');
+    const initialState = useInitialState('http://192.168.101.5:3000/initialState');
     let { current, loading } = initialState;
     
     
@@ -35,21 +35,21 @@ const App = () => {
     return(
         <div className="App">
             {/* main page */}
-            {/* <Header />
+            <Header />
             <div>
                 <SearchContainer />
                 <FeaturedContainer featureProperties={current.featureProperties}/>
                 <CallToActionContainer />
                 <FindOutContainer />
             </div>
-            <Footer /> */}
+            <Footer />
 
             {/* results page */}
-            <HeaderSearchBar />
+            {/* <HeaderSearchBar />
             <div>
                 <PropertyResultsContainer dataProperties={current.properties}/>
             </div>
-            <Footer />
+            <Footer /> */}
 
             {/* <Header />
             <div>
@@ -66,4 +66,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default Home;
